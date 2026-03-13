@@ -1,0 +1,31 @@
+# customer_ageing/semantic/model/metrics.yaml
+
+total_overdue:
+  description: "Total overdue amount"
+  measure: overdue_amount
+  behavior: additive
+
+delay_days:
+  description: "Delay days(integer)"
+  measure: delay_days
+  behavior: additive
+
+max_delay_days:
+  description: "Maximum delay days"
+  measure: max_delay
+  behavior: additive
+
+count_vendors:
+  description: "Count of unique customers"
+  measure: vendor_count
+  behavior: additive
+
+overdue_by_bucket:
+  description: "Overdue amount grouped by ageing bucket"
+  measure: overdue_amount
+  behavior: additive
+  
+count_rows:
+  description: "Total count of records"
+  measure: row_count
+  behavior: additive

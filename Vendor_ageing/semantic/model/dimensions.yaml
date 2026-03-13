@@ -1,0 +1,69 @@
+vendor_no:
+  column: Vendor_no
+  type: integer
+
+vendor_name:
+  column: Vendor_name
+  type: string
+  business_logic: "Vendor name"
+
+company_code:
+  column: Company_code
+  type: integer
+
+segment:
+  column: Segment
+  type: integer
+
+posting_date:
+  column: Posting_Date
+  type: date
+
+city:
+  column: City
+  type: string
+
+profit_center:
+  column: Profit_center
+  type: string
+  business_logic: "Profit center"
+
+profit_center_desc:
+  column: Profit_center_desc
+  type: string
+  business_logic: "Profit center text description"
+
+gl_account:
+  column: GL_Account
+  type: string
+  business_logic: "General ledger account"
+
+gl_account_desc:
+  column: GL_Account_Desc
+  type: string
+  business_logic: "GL account description"
+
+document_type:
+  column: Document_Type
+  type: string
+  business_logic: "Document type"
+
+supplier_ref_number:
+  column: Supplier_Ref_No
+  type: string
+  business_logic: " Supplier Reference number"
+
+description:
+  column: description
+  type: string
+  business_logic: "Description of document type"
+
+recon_account:
+  column: Recon_Account
+  type: string
+  business_logic: "Recon account"
+
+recon_account_desc:
+  column: Recon_Account_Desc
+  type: string
+  business_logic: "Recon account description"

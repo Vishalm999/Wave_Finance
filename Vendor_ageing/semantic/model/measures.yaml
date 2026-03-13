@@ -1,0 +1,30 @@
+# vendor_ageing/semantic/model/measures.yaml
+
+overdue_amount:
+  column: Overdue
+  aggregation: SUM
+  sql: |
+    CASE 
+         WHEN "Overdue" LIKE '%-' THEN TRY_CAST('-' || REPLACE("Overdue", '-', '') AS DOUBLE)
+         ELSE TRY_CAST("Overdue" AS DOUBLE)
+    END
+
+delay_days:
+  column: Delay_days
+  aggregation: MAX
+  sql: CAST(FLOOR(TRY_CAST("Delay_days" AS DOUBLE)) AS INTEGER)
+
+vendor_count:
+  column: vendor_no
+  aggregation: COUNT
+  sql: DISTINCT "Vendor_no"
+
+row_count:
+  column: "*"
+  aggregation: COUNT
+  sql: "*"
+
+max_delay:
+  column: Delay_days
+  aggregation: MAX
+  sql: TRY_CAST("Delay_days" AS DOUBLE)

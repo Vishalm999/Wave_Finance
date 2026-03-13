@@ -1,0 +1,4 @@
+ageing_fact:
+  table: sapfinance.vendor_ageing.vendor_ageing_report
+  grain: one row per vendor invoice
+  primary_date: posting_date
